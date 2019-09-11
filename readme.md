@@ -1,6 +1,6 @@
 README.MD
 
-By Jean-Sébastien St-Pierre
+By Jean-SÃ©bastien St-Pierre
 2019/09/12
 
 PREREQUISITES:
@@ -9,7 +9,7 @@ PREREQUISITES:
 
 RUNNING INSTRUCTIONS:
 
-- Clone the Git repo with "git clone <theRepoURL>
+- Clone the Git repo with "git clone <theRepoURL>"
 - Install all the dependancies by typing the following command: "pip install -r requirements.txt"
 - UNIX-BASED OS: Enter the command: "export FLASK_APP=hello.py"  WINDOWS USERS: the command is "$env:FLASK_APP="hello.py"" 
 - Finally, enter "flask run"
