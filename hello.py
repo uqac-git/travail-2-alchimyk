@@ -14,15 +14,24 @@ def accueil():
 	if request.method == 'POST':
 		answer = request.form.get('ans')
 		mode = request.form.get('algorithmes')
-		print(mode)
-		myAns = isSameShit(answer, mode, secretHash)
-		result = myAns
-		return render_template('accueil.tpl', titre=titre, result = result)
+		hashed = hashThisShit(answer, mode)
+		if hashed == secretHash:
+			verdict = "correspond"
+		else:
+			verdict = "ne correspond pas"
+			
+		return render_template('accueil.tpl', titre = titre, result = hashed, mode = mode, verdict = verdict)
 		
 	else :
 		return render_template('accueil.tpl', titre = titre)
+
+@app.errorhandler(404)
+def myErrorHandle(e):
+	print("YOU BITCH")
+	return "Lala"
+	
 		
-def isSameShit(ans, mode, hash):
+def hashThisShit(ans, mode):
 	print(mode)
 	switcher={
 		"md5": hashlib.md5(),
@@ -34,20 +43,9 @@ def isSameShit(ans, mode, hash):
 	}
 	
 	hashMode = switcher.get(mode, "Error!!!")
-	print(hashMode)
 	hashMode.update(ans.encode('utf-8'))
-	print(ans.encode('utf-8'))
-	#hashmode=hashlib.md5().update(ans.encode('utf-8'))
-	print(hashMode)
-	hashed = hashMode.hexdigest()
-	hashedString = hash + '   ,   ' + hashed
-	return hashedString
+	return hashMode.hexdigest()
 	
-# @app.route('/')
-# def accueil():
-	# mots = ["bonjour", "a", "toi,", "visiteur."]
-	# titre = "Découvrez le code secret!!!"
-	# return render_template('accueil.tpl', titre=titre, mots=mots)
-
+	
 if __name__ == '__main__':
 	app.run(ssl_context=('travail2_cert.crt', 'travail2_pv.key'))
