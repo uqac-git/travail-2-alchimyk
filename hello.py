@@ -14,6 +14,7 @@ def accueil():
 	if request.method == 'POST':
 		answer = request.form.get('ans')
 		mode = request.form.get('algorithmes')
+		theURL = request.form.get('algorithmes')
 		hashed = hashThisShit(answer, mode)
 		if hashed == secretHash:
 			verdict = "correspond"
@@ -27,8 +28,9 @@ def accueil():
 
 @app.errorhandler(404)
 def myErrorHandle(e):
-	print("YOU BITCH")
-	return "Lala"
+	titre = "Erreur 404!  Page non trouvée!"
+	message = "La page " + request.base_url + " n'existe pas!"
+	return render_template('page404.tpl', titre = titre, message = message)
 	
 		
 def hashThisShit(ans, mode):
