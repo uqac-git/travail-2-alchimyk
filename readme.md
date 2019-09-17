@@ -1,7 +1,7 @@
-README.MD
+﻿README.MD
 
 By Jean-Sébastien St-Pierre
-2019/09/12
+2019/09/17
 
 PREREQUISITES:
 
@@ -12,14 +12,15 @@ RUNNING INSTRUCTIONS:
 - Clone the Git repo with "git clone [theRepoURL]"
 - Install all the dependancies by typing the following command: "pip install -r requirements.txt"
 - UNIX-BASED OS: Enter the command: "export FLASK_APP=hello.py"  WINDOWS USERS: use "$env:FLASK_APP="hello.py"" 
-- Finally, type "flask run" and press Enter
+- Type "python -m hello.py", press enter and good luck finding the secret code!
+  ** Please note that ONLY alphanumeric characters are allowed in the "Votre réponse" field
 
-The content will be available at http://localhost:5000 via your favorite internet browser
+The content will be available at https://localhost:5000 via your favorite internet browser
 
 Enjoy!
 
-** Please donate to our charity!  We accept all Interac electronic money transfer!  Send to 581-882-5150.
-   Simple, easy and secure! **
+** Please donate to our charity!  We accept all Interac, Visa, Mastercard and Paypal electronic money transfer! **
+** NEW!!! ** We now accept Bitcoins (10 is the minimum).  Please send to 581-882-5150.  Simple, easy and secure! **
 
 
 	
