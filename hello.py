@@ -18,7 +18,7 @@ def accueil():
 	# Data processing
 	if request.method == 'POST':
 		answer = request.form.get('ans')
-		mode = request.form.get('algorithmes'
+		mode = request.form.get('algorithmes')
 		hashed = hashThisShit(answer, mode)
 		if hashed == secretHash:
 			verdict = "correspond"
