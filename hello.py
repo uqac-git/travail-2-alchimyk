@@ -1,8 +1,8 @@
-# hello.py by Jean-Sébastien St-Pierre STPJ15018206, September 2019
-# This is the logic implementation for the basic flask server '/' -->
-
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
+
+# hello.py by Jean-Sébastien St-Pierre STPJ15018206, September 2019
+# This is the logic implementation for the basic flask server
 
 from flask import Flask, request, render_template
 import hashlib

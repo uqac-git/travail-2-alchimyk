@@ -19,7 +19,7 @@ RUNNING INSTRUCTIONS:
 - Setup the flask server's basic configuration:
 	- UNIX-BASED OS: Enter the command: "export FLASK_APP=hello.py"
 	- WINDOWS USERS: use "$env:FLASK_APP="hello.py"" 
-- Type "python -m hello.py", press enter and good luck finding the secret code!
+- Type "python hello.py", press enter and good luck finding the secret code!
   ** Please note that ONLY alphanumeric characters are allowed in the "Votre réponse" field
 
 The content will be available at https://localhost:5000 via your favorite internet browser
