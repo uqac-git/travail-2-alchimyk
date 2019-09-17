@@ -11,7 +11,14 @@ RUNNING INSTRUCTIONS:
 
 - Clone the Git repo with "git clone [theRepoURL]"
 - Install all the dependancies by typing the following command: "pip install -r requirements.txt"
-- UNIX-BASED OS: Enter the command: "export FLASK_APP=hello.py"  WINDOWS USERS: use "$env:FLASK_APP="hello.py"" 
+- Install the Python virtual environment:
+	- Type "python -m venv ."
+	- Activate the virtual environment:
+		- UNIX-BASED OS: Type \bin\activate and press Enter
+		- WINDOWS USERS: Type .\Scripts\activate and press Enter
+- Setup the flask server's basic configuration:
+	- UNIX-BASED OS: Enter the command: "export FLASK_APP=hello.py"
+	- WINDOWS USERS: use "$env:FLASK_APP="hello.py"" 
 - Type "python -m hello.py", press enter and good luck finding the secret code!
   ** Please note that ONLY alphanumeric characters are allowed in the "Votre réponse" field
 
