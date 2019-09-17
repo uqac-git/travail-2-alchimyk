@@ -1,3 +1,6 @@
+<!-- page404.tpl by Jean-Sébastien St-Pierre STPJ15018206, September 2019
+     This page is displayed by the flask server following any invalid GET request -->
+	 
 <!DOCTYPE html>
 <html>
 <html lang="fr">
@@ -5,6 +8,7 @@
         <meta charset="latin-1" />
 		<title>{{ titre }}</title>
 		<style>
+		<!-- A bit of CSS again! -->
 		h1 {text-align:center;}
 		h2 {text-align:center;}
 		p {text-align:center;}
