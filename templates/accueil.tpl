@@ -41,7 +41,7 @@
 			</select><br><br>
 			
 			<strong><label for='ans'>Votre réponse:</label></strong>
-			<input type="text" id="ans" name="ans" pattern="[a-zA-Z0-9]+"></input>  <!-- Regex validation for alphanumeric-only input -->
+			<input type="text" id="ans" name="ans" pattern="[a-zA-Z0-9]+">  <!-- Regex validation for alphanumeric-only input -->
 			<input type="submit" value="Vérifier!" formmethod="post"></input><br><br>			
 			
 			</div>

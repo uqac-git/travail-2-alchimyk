@@ -6,6 +6,7 @@
 
 from flask import Flask, request, render_template
 import hashlib
+import re
 
 app = Flask(__name__)
 
@@ -19,6 +20,9 @@ def accueil():
 	if request.method == 'POST':
 		answer = request.form.get('ans')
 		mode = request.form.get('algorithmes')
+		pattern = "[a-zA-Z0-9]+"
+		if not re.match(pattern, answer):
+			return render_template('noWay.tpl', titre = "Nooooooo!", message = "Tu m'auras pas comme ça!!  ;)")
 		hashed = hashThisShit(answer, mode)
 		if hashed == secretHash:
 			verdict = "correspond"
